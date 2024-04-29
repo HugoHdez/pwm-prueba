@@ -1,5 +1,6 @@
 <div class="m-4">
-  <h2>Lista de compras</h2>
+  <h2>{{ headerFather }}</h2>
+  <input type="text" [(ngModel)]="headerFather">
 
   <form (ngSubmit)="addItem()" #itemForm="ngForm">
     <input class="me-2" type="text" required
@@ -21,4 +22,4 @@
   </ul>
 
 
-</div>
+<app-child [headerChild]="headerFather" (headerChange)="headerFather = $event" ></app-child>

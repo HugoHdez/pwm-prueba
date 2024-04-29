@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 interface Item {
   name: string;
@@ -15,6 +15,7 @@ export class AppComponent {
 
   items: Item[] = [];
   newItemName: string = '';
+  headerFather = 'Titulin'
 
   addItem() {
     const newItem: Item = {name: this.newItemName, completed: false};
